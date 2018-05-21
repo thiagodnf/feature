@@ -22,6 +22,8 @@ File -> Import -> General -> Existing Projects into Workspace
 
 The feature models are inside the source (src) folder. You can visualize or modify them. To visualize the features models in a different extension, access the exported folder.
 
+For information, access [https://github.com/FeatureIDE/FeatureIDE/wiki/FeatureIDE-Installation-and-Update|https://github.com/FeatureIDE/FeatureIDE/wiki/FeatureIDE-Installation-and-Update](https://github.com/FeatureIDE/FeatureIDE/wiki/FeatureIDE-Installation-and-Update|https://github.com/FeatureIDE/FeatureIDE/wiki/FeatureIDE-Installation-and-Update)
+
 ## Papers
 
 This is a list of papers that used this features modules in the experiments.
