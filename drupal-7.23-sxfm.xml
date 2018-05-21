@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature_model name="FeatureIDE model">
+    <feature_tree>
+:r Drupal_7_23(Drupal_7_23)
+	:m Node(Node)
+		:o Blog(Blog)
+		:o Forum(Forum)
+	:o Path(Path)
+	:m System(System)
+	:o Image(Image)
+	:m Filter(Filter)
+	:m Field(Field)
+		:m Text(Text)
+		:m Field_SQL_Storage(Field_SQL_Storage)
+		:o Options(Options)
+	:o Field_UI(Field_UI)
+	:o File(File)
+	:o Comment(Comment)
+	:o Views(Views)
+		:o Views_UI(Views_UI)
+	:o Libraries_API(Libraries_API)
+	:o IMCE(IMCE)
+	:o Ctools(Ctools)
+		:o Ctools_Access_Ruleset(Ctools_Access_Ruleset)
+		:o Views_Content(Views_Content)
+		:o CTools_Custom_Content(CTools_Custom_Content)
+	:m User(User)
+	:o Token(Token)
+	:o Taxonomy(Taxonomy)
+	:o Date(Date)
+		:m Date_API(Date_API)
+		:o Date_Popup(Date_Popup)
+		:o Date_Views(Date_Views)
+	:o WebForm(WebForm)
+	:o Link(Link)
+	:o Entity_API(Entity_API)
+		:o Entity_Tokens(Entity_Tokens)
+	:o CKEditor(CKEditor)
+	:o Captcha(Captcha)
+		:o Image_Captcha(Image_Captcha)
+	:o Features(Features)
+	:o Panels(Panels)
+		:o Panel_Nodes(Panel_Nodes)
+		:o Panels_IPE(Panels_IPE)
+	:o Pathauto(Pathauto)
+	:o JQuery_Update(JQuery_Update)
+	:o Google_Analytics(Google_Analytics)
+	:o Rules(Rules)
+		:o Rules_Scheduler(Rules_Scheduler)
+		:o Rules_UI(Rules_UI)
+	:o Backup_Migrate(Backup_Migrate)
+</feature_tree>
+    <constraints>
+C1:~Forum  or  Taxonomy
+C2:~Forum  or  Options
+C3:~Forum  or  Comment
+C4:~Image  or  File
+C5:~Views  or  Ctools
+C6:~Views_UI  or  Ctools
+C7:~Views_Content  or  Views
+C8:~Taxonomy  or  Options
+C9:~Date_Views  or  Ctools
+C10:~Date_Views  or  Views
+C11:~Panels  or  Ctools
+C12:~Panels_IPE  or  Ctools
+C13:~Panel_Nodes  or  Ctools
+C14:~Pathauto  or  Token
+C15:~Pathauto  or  Path
+C16:~Rules  or  Entity_API
+C17:~Rules  or  Entity_Tokens
+C18:~Rules_Scheduler  or  Entity_API
+C19:~Rules_Scheduler  or  Entity_Tokens
+C20:~Rules_UI  or  Entity_API
+C21:~Rules_UI  or  Entity_Tokens
+</constraints>
+</feature_model>

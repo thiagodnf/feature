@@ -1,0 +1,34 @@
+%Relationships
+Drupal_7_23: Node [Path] System [Image] Filter Field [Field_UI] [File] [Comment] [Views] [Libraries_API] [IMCE] [Ctools] User [Token] [Taxonomy] [Date] [WebForm] [Link] [Entity_API] [CKEditor] [Captcha] [Features] [Panels] [Pathauto] [JQuery_Update] [Google_Analytics] [Rules] [Backup_Migrate];
+Panels: [Panel_Nodes] [Panels_IPE];
+Node: [Blog] [Forum];
+Ctools: [Ctools_Access_Ruleset] [Views_Content] [CTools_Custom_Content];
+Views: [Views_UI];
+Entity_API: [Entity_Tokens];
+Field: Text Field_SQL_Storage [Options];
+Rules: [Rules_Scheduler] [Rules_UI];
+Date: Date_API [Date_Popup] [Date_Views];
+Captcha: [Image_Captcha];
+
+%Constraints
+Forum REQUIRES Taxonomy;
+Forum REQUIRES Options;
+Forum REQUIRES Comment;
+Image REQUIRES File;
+Views REQUIRES Ctools;
+Views_UI REQUIRES Ctools;
+Views_Content REQUIRES Views;
+Taxonomy REQUIRES Options;
+Date_Views REQUIRES Ctools;
+Date_Views REQUIRES Views;
+Panels REQUIRES Ctools;
+Panels_IPE REQUIRES Ctools;
+Panel_Nodes REQUIRES Ctools;
+Pathauto REQUIRES Token;
+Pathauto REQUIRES Path;
+Rules REQUIRES Entity_API;
+Rules REQUIRES Entity_Tokens;
+Rules_Scheduler REQUIRES Entity_API;
+Rules_Scheduler REQUIRES Entity_Tokens;
+Rules_UI REQUIRES Entity_API;
+Rules_UI REQUIRES Entity_Tokens;

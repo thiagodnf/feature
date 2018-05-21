@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Drupal_7_23"/>
+    <feature automatic="selected" name="Node"/>
+    <feature automatic="selected" name="System"/>
+    <feature automatic="selected" name="Filter"/>
+    <feature automatic="selected" name="Field"/>
+    <feature automatic="selected" name="Text"/>
+    <feature automatic="selected" name="Field_SQL_Storage"/>
+    <feature automatic="selected" name="User"/>
+</configuration>
