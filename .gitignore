@@ -30,3 +30,16 @@ Temporary Items
 
 
 # End of https://www.gitignore.io/api/macos
+
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
