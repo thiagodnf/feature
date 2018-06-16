@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature_model name="FeatureIDE model">
+    <feature_tree>
+:r SmartHome(SmartHome)
+	:o HVACManagement(HVACManagement)
+		:o HeatingControl(HeatingControl)
+			:m ManualHeating(ManualHeating)
+			:o AutomatedHeating(AutomatedHeating)
+				:o RemoteHeatingControl(RemoteHeatingControl)
+		:o AirConditioningControl(AirConditioningControl)
+			:m ManualAirConditioningControl(ManualAirConditioningControl)
+			:o AutomatedAirConditioningControl(AutomatedAirConditioningControl)
+				:o RemoteAirConditioningControl(RemoteAirConditioningControl)
+		:o VentilationControl(VentilationControl)
+			:m ManualVentilationControl(ManualVentilationControl)
+			:o AutomatedVentilationControl(AutomatedVentilationControl)
+		:o FullAutomatedHVACControl(FullAutomatedHVACControl)
+		:o FullManualHVACControl(FullManualHVACControl)
+	:m WindowsManagement(WindowsManagement)
+		:m ManualWindows(ManualWindows)
+		:o AutomatedWindows(AutomatedWindows)
+	:m LightManagement(LightManagement)
+		:o AutomatedIlumination(AutomatedIlumination)
+			:g [1,*]
+				: AutomatedPerimeterIllumination(AutomatedPerimeterIllumination)
+				: AutomatedIn_houseIllumination(AutomatedIn_houseIllumination)
+		:m ManualIlumination(ManualIlumination)
+	:m UI(UI)
+		:m TouchScreen(TouchScreen)
+		:o Internet(Internet)
+			:o Privacy(Privacy)
+				:o EncryptionAlgorithm(EncryptionAlgorithm)
+					:g [1,1]
+						: RSA(RSA)
+						: DES(DES)
+	:o PresenceSimulation(PresenceSimulation)
+		:g [1,*]
+			: LightSimulation(LightSimulation)
+			: BlindsSimulation(BlindsSimulation)
+			: AVSimulation(AVSimulation)
+	:o FireControl(FireControl)
+		:m FirstAidGroup(FirstAidGroup)
+			:m FireDepartment(FireDepartment)
+			:o OtherGroup(OtherGroup)
+		:o FireSprinklers(FireSprinklers)
+	:o IrrigationSprinklers(IrrigationSprinklers)
+		:m SimpleControl(SimpleControl)
+		:o AutomatedSprinklers(AutomatedSprinklers)
+	:o Alarm(Alarm)
+		:g [1,*]
+			: Siren(Siren)
+			: Bell(Bell)
+			: Lights(Lights)
+	:o Security(Security)
+		:m AuthenticationDevice(AuthenticationDevice)
+			:g [1,*]
+				: Keypad(Keypad)
+				: RetinaScanner(RetinaScanner)
+				: FingerprintReader(FingerprintReader)
+		:o IntrusionDetectionDevice(IntrusionDetectionDevice)
+			:g [1,*]
+				: GlassbreakSensors(GlassbreakSensors)
+				: Cameras(Cameras)
+	:o BlindsManagement(BlindsManagement)
+		:m ManualBlinds(ManualBlinds)
+		:o AutomatedBlinds(AutomatedBlinds)
+	:o AVManagement(AVManagement)
+		:o AutomatedAV(AutomatedAV)
+	:o Moods(Moods)
+</feature_tree>
+    <constraints>
+C1:~RSA  or  ~DES
+C2:~HeatingControl  or  HVACManagement
+</constraints>
+</feature_model>

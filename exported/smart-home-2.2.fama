@@ -1,0 +1,29 @@
+%Relationships
+Security: AuthenticationDevice [IntrusionDetectionDevice];
+AutomatedHeating: [RemoteHeatingControl];
+Privacy: [EncryptionAlgorithm];
+UI: TouchScreen [Internet];
+IrrigationSprinklers: SimpleControl [AutomatedSprinklers];
+WindowsManagement: ManualWindows [AutomatedWindows];
+VentilationControl: ManualVentilationControl [AutomatedVentilationControl];
+AVManagement: [AutomatedAV];
+FirstAidGroup: FireDepartment [OtherGroup];
+HeatingControl: ManualHeating [AutomatedHeating];
+AuthenticationDevice: [1,3]{Keypad RetinaScanner FingerprintReader};
+Internet: [Privacy];
+AutomatedAirConditioningControl: [RemoteAirConditioningControl];
+IntrusionDetectionDevice: [1,2]{GlassbreakSensors Cameras};
+AirConditioningControl: ManualAirConditioningControl [AutomatedAirConditioningControl];
+FireControl: FirstAidGroup [FireSprinklers];
+BlindsManagement: ManualBlinds [AutomatedBlinds];
+EncryptionAlgorithm: [1,1]{RSA DES};
+PresenceSimulation: [1,3]{LightSimulation BlindsSimulation AVSimulation};
+HVACManagement: [HeatingControl] [AirConditioningControl] [VentilationControl] [FullAutomatedHVACControl] [FullManualHVACControl];
+SmartHome: [HVACManagement] WindowsManagement LightManagement UI [PresenceSimulation] [FireControl] [IrrigationSprinklers] [Alarm] [Security] [BlindsManagement] [AVManagement] [Moods];
+AutomatedIlumination: [1,2]{AutomatedPerimeterIllumination AutomatedIn_houseIllumination};
+Alarm: [1,3]{Siren Bell Lights};
+LightManagement: [AutomatedIlumination] ManualIlumination;
+
+%Constraints
+RSA EXCLUDES DES;
+HeatingControl REQUIRES HVACManagement;
